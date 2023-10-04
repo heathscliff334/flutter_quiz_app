@@ -5,6 +5,8 @@ const normalStyle = TextStyle(
 );
 const normalStyleWhite = TextStyle(fontSize: 14, color: Colors.white);
 
+const normalStyleWhiteSmall = TextStyle(fontSize: 12, color: Colors.white);
+
 const titleStyle = TextStyle(
   fontSize: 35,
 );

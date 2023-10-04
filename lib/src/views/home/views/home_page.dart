@@ -144,7 +144,7 @@ class _HomePageState extends State<HomePage> {
                             child: Row(
                               children: [
                                 CustomElevatedButton(
-                                  width: 130,
+                                  width: 100,
                                   buttonColor: Colors.transparent,
                                   borderColor: Colors.transparent,
                                   elevation: 0,
@@ -161,15 +161,16 @@ class _HomePageState extends State<HomePage> {
                                         WrapCrossAlignment.center,
                                     children: [
                                       Icon(Icons.share_rounded,
-                                          color: accentColor, size: 18),
+                                          color: accentColor, size: 16),
                                       SizedBox(width: 3),
-                                      Text("Share", style: normalStyleWhite),
+                                      Text("Share",
+                                          style: normalStyleWhiteSmall),
                                     ],
                                   ),
                                 ),
                                 const Spacer(),
                                 CustomElevatedButton(
-                                  width: 130,
+                                  width: 110,
                                   buttonColor: Colors.transparent,
                                   borderColor: Colors.transparent,
                                   elevation: 0,
@@ -180,9 +181,10 @@ class _HomePageState extends State<HomePage> {
                                         WrapCrossAlignment.center,
                                     children: [
                                       Icon(Icons.star_rounded,
-                                          color: Colors.yellow, size: 20),
+                                          color: Colors.yellow, size: 16),
                                       SizedBox(width: 3),
-                                      Text("Rate Us", style: normalStyleWhite),
+                                      Text("Rate Us",
+                                          style: normalStyleWhiteSmall),
                                     ],
                                   ),
                                 ),

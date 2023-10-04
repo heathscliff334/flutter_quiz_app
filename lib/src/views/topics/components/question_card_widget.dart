@@ -27,7 +27,6 @@ class QuestionCardWidget extends StatelessWidget {
           AnimatedSize(
             duration: const Duration(milliseconds: 300),
             child: Container(
-              // height: 50,
               padding: PAD_ASYM_H20_V10,
               width: double.infinity,
               decoration: BoxDecoration(
@@ -71,9 +70,7 @@ class QuestionCardWidget extends StatelessWidget {
 
               return Container(
                 margin: PAD_ONLY_T20,
-                // height: 20,
                 width: double.infinity,
-                // color: Colors.red,
                 child: CustomElevatedButton(
                     borderRadius: BorderRadius.circular(20),
                     onPressed: () {

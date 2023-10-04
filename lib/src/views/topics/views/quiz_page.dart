@@ -71,7 +71,6 @@ class _QuizPageState extends State<QuizPage> {
                     margin:
                         const EdgeInsets.only(top: 10, bottom: 10, right: 10),
                     child: SizedBox(
-                        // width: 35,
                         height: 35,
                         child: TextButton(
                             onPressed: () {
@@ -88,7 +87,7 @@ class _QuizPageState extends State<QuizPage> {
                 ],
                 forceElevated: false,
                 elevation: sliverAppElevation,
-                // shadowColor: _customColors.sliverAppShadowColor,
+
                 floating: true,
                 flexibleSpace: const FlexibleSpaceBar(),
                 expandedHeight: 60,

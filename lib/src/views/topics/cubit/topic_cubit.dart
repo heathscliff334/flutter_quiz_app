@@ -12,11 +12,8 @@ class TopicCubit extends Cubit<TopicState> {
   void getTopicList() async {
     emit(TopicLoading());
     try {
-      // final _data = await _homeRepository.getUserDetailsWithSessionAndKey(
-      //     userId: userId, homeRequest: homeRequest);
-      print("getTopicList()");
-      final _data = await _topicsService.fetchTopics();
-      _data.fold(
+      final data = await _topicsService.fetchTopics();
+      data.fold(
         (l) => emit(TopicError(l)),
         (r) {
           emit(TopicListSuccess(r));

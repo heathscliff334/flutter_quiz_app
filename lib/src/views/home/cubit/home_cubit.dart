@@ -12,11 +12,8 @@ class HomeCubit extends Cubit<HomeState> {
   void getTopicList() async {
     emit(HomeLoading());
     try {
-      // final _data = await _homeRepository.getUserDetailsWithSessionAndKey(
-      //     userId: userId, homeRequest: homeRequest);
-      print("getTopicList()");
-      final _data = await _topicsService.fetchTopics();
-      _data.fold(
+      final data = await _topicsService.fetchTopics();
+      data.fold(
         (l) => emit(HomeError(l)),
         (r) {
           emit(HomeListSuccess(r));

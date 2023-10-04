@@ -9,9 +9,7 @@ void callLoader(BuildContext ctx) {
       isAppbarOverlay: true,
       isBottomBarOverlay: true,
       progressIndicator: const CircularProgressIndicator(
-          // strokeWidth: 10,
-          backgroundColor: Colors.white,
-          color: primaryColor),
+          backgroundColor: Colors.white, color: primaryColor),
       overlayColor: const Color(0x99E8EAF6).withOpacity(0.2));
 }
 

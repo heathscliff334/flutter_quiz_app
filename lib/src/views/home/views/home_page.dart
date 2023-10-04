@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _getTopicList() {
-    print("Home _getTopicList() initiated");
+    PrintLog().printPrimary("Home _getTopicList() initiated");
     context.read<HomeCubit>().getTopicList();
   }
 
@@ -61,11 +61,6 @@ class _HomePageState extends State<HomePage> {
                 PrintLog()
                     .printError("Home State Error => ${state.error.message}");
               } else if (state is HomeListSuccess) {
-                // logger.i("Info log");
-                // logger.d("debug log");
-                // logger.t("trace log");
-                // Logger(printer: SimplePrinter(colors: true)).i('boom');
-
                 PrintLog().printSuccess("Home State success");
 
                 _data = state.data;
@@ -85,16 +80,12 @@ class _HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         mainAxisSize: MainAxisSize.max,
                         children: [
-                          Container(
+                          SizedBox(
                             height: 250,
                             width: 250,
-                            // color: Colors.red,
-                            child: Container(
-                              // padding: const EdgeInsets.symmetric(horizontal: 30),
-                              child: Hero(
-                                tag: 'appLogo',
-                                child: Image(image: logo),
-                              ),
+                            child: Hero(
+                              tag: 'appLogo',
+                              child: Image(image: logo),
                             ),
                           ),
                           const SizedBox(height: 10),
@@ -111,8 +102,6 @@ class _HomePageState extends State<HomePage> {
                                 borderRadius: BorderRadius.circular(20),
                                 onPressed: _data.isNotEmpty
                                     ? () {
-                                        // PrintLog().printSuccess(
-                                        //     generateRandomNumber().toString());
                                         Navigator.push(
                                             context,
                                             MaterialPageRoute(
@@ -165,10 +154,6 @@ class _HomePageState extends State<HomePage> {
                                       title: 'Quiz App',
                                       url:
                                           'https://www.linkedin.com/in/kevin-laurence-6a61bb113/',
-                                      // description:
-                                      //     'This is a quiz app demo, developed with Flutter and Firebase firestore',
-                                      // subject:
-                                      //     'This is a quiz app demo, developed with Flutter and Firebase firestore',
                                     );
                                   },
                                   child: const Wrap(

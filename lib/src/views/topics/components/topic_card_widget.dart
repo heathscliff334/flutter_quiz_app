@@ -32,7 +32,6 @@ class TopicCardWidget extends StatelessWidget {
         margin: EdgeInsets.only(
             left: 20, right: 20, bottom: idx == itemLength - 1 ? 20 : 10),
         padding: PAD_ALL_20,
-        // height: 60,
         width: double.infinity,
         decoration: BoxDecoration(
             color: accentColor.withOpacity(0.1),

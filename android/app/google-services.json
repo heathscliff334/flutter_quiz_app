@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "896194105396",
+    "project_id": "vquiz-ea8a8",
+    "storage_bucket": "vquiz-ea8a8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896194105396:android:9dd505084d6cfdb9173a61",
+        "android_client_info": {
+          "package_name": "org.kevinlaurenceapp.vquiz_app.vquiz_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2w9g01dKvjfdqoRIxlqahN4375DFv4jE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

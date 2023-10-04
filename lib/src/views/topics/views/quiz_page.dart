@@ -27,8 +27,8 @@ class QuizPage extends StatefulWidget {
 
 class _QuizPageState extends State<QuizPage> {
   final ValueNotifier<double> _progress = ValueNotifier(0);
-  // final int _totalMilliseconds = 30000; // 30 seconds
-  final int _totalMilliseconds = 5000; // 30 seconds
+  final int _totalMilliseconds = 30000; // 30 seconds
+  // final int _totalMilliseconds = 5000;
   int _currentMilliseconds = 0, currentQuestion = 0, _correctAnswer = 0;
   Timer? _timer;
 

@@ -29,6 +29,7 @@ class Questions {
   int? index;
   String? question;
   int? answer;
+  int? userAnswer;
   List<Choices>? choices;
   String? image;
 
@@ -37,6 +38,7 @@ class Questions {
       this.index,
       this.question,
       this.answer,
+      this.userAnswer,
       this.choices,
       this.image});
 

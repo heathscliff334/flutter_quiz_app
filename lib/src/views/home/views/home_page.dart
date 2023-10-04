@@ -2,13 +2,15 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_overlay_loader/flutter_overlay_loader.dart';
+import 'package:share_me/share_me.dart';
 import 'package:vquiz_app/src/components/custom_elevated_button.dart';
 import 'package:vquiz_app/src/res/colors.dart';
 import 'package:vquiz_app/src/res/dimens.dart';
 import 'package:vquiz_app/src/res/styles.dart';
 import 'package:vquiz_app/src/services/utils/common_service.dart';
 import 'package:vquiz_app/src/services/utils/print_log.dart';
-import 'package:vquiz_app/src/views/home/cubit/cubit/home_cubit.dart';
+import 'package:vquiz_app/src/views/home/cubit/home_cubit.dart';
 
 import 'package:vquiz_app/src/views/topics/models/topic_model.dart';
 import 'package:vquiz_app/src/views/topics/views/quiz_page.dart';
@@ -37,6 +39,9 @@ class _HomePageState extends State<HomePage> {
 
   @override
   void initState() {
+    WidgetsBinding.instance.addPostFrameCallback((_) async {
+      callLoader(context);
+    });
     _getTopicList();
     super.initState();
   }
@@ -64,6 +69,7 @@ class _HomePageState extends State<HomePage> {
                 PrintLog().printSuccess("Home State success");
 
                 _data = state.data;
+                Loader.hide();
               }
             },
             builder: (context, state) {
@@ -154,7 +160,17 @@ class _HomePageState extends State<HomePage> {
                                   borderColor: Colors.transparent,
                                   elevation: 0,
                                   borderRadius: BorderRadius.circular(20),
-                                  onPressed: () {},
+                                  onPressed: () async {
+                                    ShareMe.system(
+                                      title: 'Quiz App',
+                                      url:
+                                          'https://www.linkedin.com/in/kevin-laurence-6a61bb113/',
+                                      // description:
+                                      //     'This is a quiz app demo, developed with Flutter and Firebase firestore',
+                                      // subject:
+                                      //     'This is a quiz app demo, developed with Flutter and Firebase firestore',
+                                    );
+                                  },
                                   child: const Wrap(
                                     crossAxisAlignment:
                                         WrapCrossAlignment.center,

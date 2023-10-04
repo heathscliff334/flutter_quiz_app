@@ -2,7 +2,7 @@ name: vquiz_app
 description: A new Flutter project.
 publish_to: 'none'
 
-version: 1.0.1+2
+version: 1.0.2+2
 
 environment:
   sdk: '>=3.0.1 <4.0.0'
@@ -19,6 +19,9 @@ dependencies:
   dartz: ^0.10.1
   meta: ^1.9.1
   flutter_overlay_loader: ^2.0.0
+  percent_indicator: 4.0.0
+  share_me: ^0.0.17
+  cached_network_image: ^3.3.0
   
   
 

@@ -10,6 +10,7 @@ const PAD_ONLY_T25 = EdgeInsets.only(top: 25);
 const PAD_ONLY_R20 = EdgeInsets.only(right: 20);
 const PAD_ONLY_R10 = EdgeInsets.only(right: 10);
 const PAD_ONLY_R5 = EdgeInsets.only(right: 5);
+const PAD_ONLY_L10 = EdgeInsets.only(left: 10);
 const PAD_ONLY_L20 = EdgeInsets.only(left: 20);
 const PAD_ONLY_B20 = EdgeInsets.only(bottom: 20);
 const PAD_ONLY_B30 = EdgeInsets.only(bottom: 30);
